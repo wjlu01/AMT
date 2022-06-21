@@ -10,7 +10,7 @@ This is the pytorch implemention for "A Text-Image Pair Is not Enough: Language-
 - ```pip install torch torchvision sklearn numpy tqdm matplotlib```
 
 ## Dataset
-Images will be uplated later.
+Download [Bloomberg's images](https://drive.google.com/file/d/1KkeMBo32gDEfrbmUjTEX4whpdda_wrYn/view?usp=sharing) and [Clue's images](https://drive.google.com/file/d/1H2rE8DJtHFgNnlGO8CSe6vLJmTtvtifp/view?usp=sharing).
 
 We expect the directory structure to be the following:
 ```
@@ -22,7 +22,14 @@ amt/data/
 ```
 
 ## Generated text from images
-The generated text used in the model has been placed in the .jsonl files for each dataset. The process of generated the text by [CATR](https://github.com/saahiluppal/catr/tree/fac82f9b4004b1dd39ccf89760b758ad19a2dbee) will be explained later.
+The generated text used in the model has been placed in the .jsonl files for each dataset. 
+
+You can generated text from images by [CATR](https://github.com/saahiluppal/catr/tree/fac82f9b4004b1dd39ccf89760b758ad19a2dbee):
+
+1) Clone the [CATR](https://github.com/saahiluppal/catr/tree/fac82f9b4004b1dd39ccf89760b758ad19a2dbee) repository locally and install all the requirements for CATR.
+2) Move `caption_multi.py` into the cloned CATR.
+3) Set the parameter "path" to indicate where the image is stored and move images to the path.
+4) run ```python caption_multi.py```
 
 ## Model Training
 - Train, evaluate, and test the three tasks in Bloomberg.
